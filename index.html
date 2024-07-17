@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Matchingham</title>
+	<link rel="shortcut icon" href="TemplateData/favicon_16x16.png" />
+    <script src="StreamingAssets/webgl-frontend.js"></script>
+  </head>
+  <body style="text-align: center; margin: 0;">
+    <style>
+      #unity-canvas {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        object-fit: contain;
+        aspect-ratio: 16/9;
+        max-width: 50vh;
+        margin: auto;
+      }
+    </style>
+    <canvas id="unity-canvas" width=1080 height=1920 style="background: #231F20"></canvas>
+    <script src="Build/Default WebGL.loader.js"></script>
+    <script>
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+      }
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+
+        dataUrl: "Build/Default WebGL.data",
+        frameworkUrl: "Build/Default WebGL.framework.js",
+        codeUrl: "Build/Default WebGL.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Focus",
+        productName: "Matchingham",
+        productVersion: "0.1.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      }).then((unityInstance) => {
+        console.log("Unity instance initialized.");
+        window.unityInstance = unityInstance;
+      });
+    </script>
+    <div id="logger-output"></div>
+  </body>
+</html>

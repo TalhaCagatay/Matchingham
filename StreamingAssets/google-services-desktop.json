@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "407738678788",
+    "project_id": "matchingham-ffc7e",
+    "storage_bucket": "matchingham-ffc7e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:407738678788:android:21f85361985418fd7f3f51",
+        "android_client_info": {
+          "package_name": "com.Focus.Matchingham"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDPaoDOBeCArER7AhFM2nxSKeiFAucZnY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
