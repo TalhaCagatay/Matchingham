@@ -24,7 +24,7 @@
       }
     </style>
     <canvas id="unity-canvas" width=1080 height=1920 style="background: #231F20"></canvas>
-    <script src="Build/web.loader.js"></script>
+    <script src="Build/Matchingham-WebGL.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
@@ -35,9 +35,9 @@
       }
       createUnityInstance(document.querySelector("#unity-canvas"), {
 
-        dataUrl: "Build/web.data",
-        frameworkUrl: "Build/web.framework.js",
-        codeUrl: "Build/web.wasm",
+        dataUrl: "Build/Matchingham-WebGL.data",
+        frameworkUrl: "Build/Matchingham-WebGL.framework.js",
+        codeUrl: "Build/Matchingham-WebGL.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Focus",
         productName: "Matchingham",
